@@ -115,10 +115,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h1 className="text-3xl xl:text-5xl font-black mb-4 leading-tight drop-shadow-2xl">
-            <span className="text-[#8B0000] intense-glitch-hover">COMBAT HACKATHON</span>
+          <h1 className="text-3xl xl:text-5xl font-black mb-4 leading-tight neon-red-text">
+            COMBAT HACKATHON
           </h1>
-          <h2 className="text-6xl xl:text-9xl font-black mb-6 leading-tight neon-glow-text">
+          <h2 className="text-6xl xl:text-9xl font-black mb-6 leading-tight neon-cyan-text">
             I'M GOING INN
           </h2>
 
