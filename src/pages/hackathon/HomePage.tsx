@@ -82,18 +82,47 @@ export default function HomePage() {
         <div className="absolute top-1/2 right-10 w-36 h-36 explosion-flash opacity-20" style={{ animationDelay: '3s' }} />
         <div className="absolute bottom-10 right-1/3 w-44 h-44 explosion-flash opacity-28" style={{ animationDelay: '0.5s' }} />
 
+        {/* Floating Military Character */}
+        <div className="absolute left-10 top-1/4 z-20 float-character hidden xl:block">
+          <img 
+            src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cz0e0h3y77k.png"
+            alt="Military Character"
+            className="w-64 h-auto opacity-60 drop-shadow-2xl"
+            style={{ filter: 'drop-shadow(0 0 20px rgba(255, 107, 0, 0.5))' }}
+          />
+        </div>
+
+        {/* Story Narration Box */}
+        <div className="absolute right-10 top-20 z-20 hidden xl:block max-w-md">
+          <div className="story-narration p-6 relative scanline-effect">
+            <div className="text-xs uppercase tracking-widest neon-orange-text mb-2 font-bold">
+              [ MISSION BRIEFING ]
+            </div>
+            <p className="text-sm text-foreground/90 leading-relaxed font-mono">
+              <span className="neon-orange-text font-bold">Year 2025.</span> The digital battlefield awaits. 
+              Elite coders from across the globe converge for the ultimate combat challenge. 
+              <span className="neon-orange-text"> Your mission:</span> Deploy your skills, 
+              survive the code wars, and emerge victorious. 
+              <span className="neon-orange-text font-bold">No retreat. No surrender.</span>
+            </p>
+            <div className="mt-4 text-xs neon-orange-text font-mono">
+              &gt; STATUS: ACTIVE_WAR_ZONE
+            </div>
+          </div>
+        </div>
+
         {/* Hero content */}
         <div className="container relative z-10 mx-auto px-4 py-20 text-center">
           <div className="mb-6 inline-block damaged-armor blood-splatter">
             <div className="px-6 py-3 border-2 border-accent/80 bg-black/70 backdrop-blur-sm cracked-armor bullet-holes">
-              <span className="text-sm font-bold text-accent tracking-widest distressed-text">
+              <span className="text-sm font-bold neon-orange-text tracking-widest">
                 ☠ ACTIVE WAR ZONE ☠
               </span>
             </div>
           </div>
 
           <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight">
-            <span className="text-accent intense-glitch-hover distressed-text">COMBAT HACKATHON</span>
+            <span className="neon-orange-text intense-glitch-hover">COMBAT HACKATHON</span>
             <br />
             <span className="text-foreground drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
           </h1>
@@ -104,12 +133,12 @@ export default function HomePage() {
 
           <div className="flex flex-col xl:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/register">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 text-lg font-bold uppercase tracking-wider battle-damage-shadow border-2 border-accent/80 damaged-armor bullet-holes">
+              <Button size="lg" className="bg-[#FF6B00] hover:bg-[#FF6B00]/90 text-white px-10 py-7 text-lg font-bold uppercase tracking-wider battle-damage-shadow border-2 border-[#FF6B00] damaged-armor bullet-holes">
                 <span className="distressed-text">⚔ Deploy to Combat</span>
               </Button>
             </Link>
             <Link to="/event">
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 py-7 text-lg font-bold uppercase tracking-wider battle-damage-shadow bg-black/60 backdrop-blur-sm cracked-armor shell-casings">
+              <Button size="lg" variant="outline" className="border-2 border-[#FF6B00] text-[#FF6B00] hover:bg-[#FF6B00] hover:text-white px-10 py-7 text-lg font-bold uppercase tracking-wider battle-damage-shadow bg-black/60 backdrop-blur-sm cracked-armor shell-casings">
                 <span className="distressed-text">📋 Mission Intel</span>
               </Button>
             </Link>
@@ -117,7 +146,7 @@ export default function HomePage() {
 
           {/* Countdown Timer */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-accent drop-shadow-2xl distressed-text">
+            <h2 className="text-2xl font-bold mb-6 neon-orange-text drop-shadow-2xl">
               ⏱ COMBAT DEPLOYMENT IN
             </h2>
             <CountdownTimer targetDate={hackathonDate} />
@@ -145,7 +174,7 @@ export default function HomePage() {
         <div className="absolute inset-0 dust-particles opacity-60" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 text-accent distressed-text">
+          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 neon-orange-text">
             ⚡ COMBAT ADVANTAGES
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -205,15 +234,15 @@ export default function HomePage() {
         <div className="absolute inset-0 shell-casings opacity-40" />
         
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto damaged-armor p-12 border-2 border-accent/60 bullet-holes cracked-armor blood-splatter shell-casings">
-            <h2 className="text-3xl xl:text-5xl font-bold mb-6 text-accent intense-glitch-hover distressed-text">
+          <div className="max-w-4xl mx-auto damaged-armor p-12 border-2 border-[#FF6B00]/60 bullet-holes cracked-armor blood-splatter shell-casings">
+            <h2 className="text-3xl xl:text-5xl font-bold mb-6 neon-orange-text intense-glitch-hover">
               ☠ READY FOR COMBAT? ☠
             </h2>
             <p className="text-lg xl:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
               Join the battlefield. Face the challenge. Prove your worth in the war zone. No retreat. No surrender.
             </p>
             <Link to="/register">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-7 text-xl font-bold uppercase tracking-wider battle-damage-shadow border-2 border-accent/80 damaged-armor bullet-holes">
+              <Button size="lg" className="bg-[#FF6B00] hover:bg-[#FF6B00]/90 text-white px-12 py-7 text-xl font-bold uppercase tracking-wider battle-damage-shadow border-2 border-[#FF6B00] damaged-armor bullet-holes">
                 <span className="distressed-text">⚔ Enter War Zone</span>
               </Button>
             </Link>

@@ -50,7 +50,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
       {timeUnits.map((unit) => (
         <Card
           key={unit.label}
-          className="relative overflow-hidden damaged-armor border-2 border-accent/70 p-6 text-center backdrop-blur-sm bg-black/70 bullet-holes cracked-armor shell-casings blood-splatter"
+          className="relative overflow-hidden damaged-armor border-2 border-[#FF6B00]/70 p-6 text-center backdrop-blur-sm bg-black/70 bullet-holes cracked-armor shell-casings blood-splatter"
         >
           {/* Heavy blood splatter corners */}
           <div className="absolute top-0 right-0 w-16 h-16 blood-splatter opacity-80" />
@@ -60,7 +60,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           <div className="absolute inset-0 burn-marks opacity-30" />
           
           <div className="relative z-10">
-            <div className="text-4xl xl:text-5xl font-bold text-accent mb-2 font-mono drop-shadow-2xl distressed-text">
+            <div className="text-4xl xl:text-5xl font-bold neon-orange-text mb-2 font-mono drop-shadow-2xl">
               {String(unit.value).padStart(2, '0')}
             </div>
             <div className="text-xs xl:text-sm font-semibold text-foreground/70 tracking-widest">

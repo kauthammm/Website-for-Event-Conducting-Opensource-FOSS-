@@ -120,6 +120,84 @@
 }
 
 @layer utilities {
+  /* Neon orange glow text */
+  .neon-orange-text {
+    color: #FF6B00;
+    text-shadow: 
+      0 0 10px rgba(255, 107, 0, 0.8),
+      0 0 20px rgba(255, 107, 0, 0.6),
+      0 0 30px rgba(255, 107, 0, 0.4),
+      0 0 40px rgba(255, 107, 0, 0.2);
+    animation: neon-flicker 3s infinite alternate;
+  }
+
+  @keyframes neon-flicker {
+    0%, 100% { 
+      text-shadow: 
+        0 0 10px rgba(255, 107, 0, 0.8),
+        0 0 20px rgba(255, 107, 0, 0.6),
+        0 0 30px rgba(255, 107, 0, 0.4),
+        0 0 40px rgba(255, 107, 0, 0.2);
+    }
+    50% { 
+      text-shadow: 
+        0 0 15px rgba(255, 107, 0, 1),
+        0 0 25px rgba(255, 107, 0, 0.8),
+        0 0 35px rgba(255, 107, 0, 0.6),
+        0 0 45px rgba(255, 107, 0, 0.4);
+    }
+  }
+
+  /* Floating character animation */
+  @keyframes float-character {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-20px) translateX(10px); }
+    50% { transform: translateY(-10px) translateX(-10px); }
+    75% { transform: translateY(-25px) translateX(5px); }
+  }
+
+  .float-character {
+    animation: float-character 6s ease-in-out infinite;
+  }
+
+  /* Story narration box */
+  .story-narration {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 10, 0, 0.85));
+    border: 2px solid rgba(255, 107, 0, 0.5);
+    box-shadow: 
+      0 0 20px rgba(255, 107, 0, 0.3),
+      inset 0 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Typewriter effect */
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  .typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 4s steps(40) 1s forwards;
+  }
+
+  /* Scanline effect for story box */
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+
+  .scanline-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.8), transparent);
+    animation: scanline 3s linear infinite;
+  }
+
   /* Heavy blood splatter effect - more intense */
   .blood-splatter {
     background-image: 
