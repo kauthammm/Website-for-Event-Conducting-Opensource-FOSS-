@@ -115,11 +115,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
-            <span className="text-[#FF6B00] intense-glitch-hover">COMBAT HACKATHON</span>
-            <br />
-            <span className="text-white drop-shadow-2xl distressed-text">I'M GOING INN</span>
+          <h1 className="text-3xl xl:text-5xl font-black mb-4 leading-tight drop-shadow-2xl">
+            <span className="text-[#8B0000] intense-glitch-hover">COMBAT HACKATHON</span>
           </h1>
+          <h2 className="text-6xl xl:text-9xl font-black mb-6 leading-tight neon-glow-text">
+            I'M GOING INN
+          </h2>
 
           <p className="text-lg xl:text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-2xl font-medium">
             Enter the war zone. Code under fire. Only the strongest survive the battlefield.

@@ -120,6 +120,45 @@
 }
 
 @layer utilities {
+  /* Neon Glow Text Effect - Vibrant Cyan/Electric Blue */
+  .neon-glow-text {
+    color: #00FFFF;
+    text-shadow: 
+      0 0 10px rgba(0, 255, 255, 1),
+      0 0 20px rgba(0, 255, 255, 1),
+      0 0 30px rgba(0, 255, 255, 1),
+      0 0 40px rgba(0, 200, 255, 1),
+      0 0 60px rgba(0, 200, 255, 0.8),
+      0 0 80px rgba(0, 150, 255, 0.6),
+      0 0 100px rgba(0, 150, 255, 0.4);
+    animation: neon-pulse 2s ease-in-out infinite;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% {
+      text-shadow: 
+        0 0 10px rgba(0, 255, 255, 1),
+        0 0 20px rgba(0, 255, 255, 1),
+        0 0 30px rgba(0, 255, 255, 1),
+        0 0 40px rgba(0, 200, 255, 1),
+        0 0 60px rgba(0, 200, 255, 0.8),
+        0 0 80px rgba(0, 150, 255, 0.6),
+        0 0 100px rgba(0, 150, 255, 0.4);
+    }
+    50% {
+      text-shadow: 
+        0 0 15px rgba(0, 255, 255, 1),
+        0 0 30px rgba(0, 255, 255, 1),
+        0 0 45px rgba(0, 255, 255, 1),
+        0 0 60px rgba(0, 200, 255, 1),
+        0 0 90px rgba(0, 200, 255, 1),
+        0 0 120px rgba(0, 150, 255, 0.8),
+        0 0 150px rgba(0, 150, 255, 0.6);
+    }
+  }
+
   /* Red Lightning Strike Animation */
   @keyframes red-lightning-strike {
     0%, 100% { 
