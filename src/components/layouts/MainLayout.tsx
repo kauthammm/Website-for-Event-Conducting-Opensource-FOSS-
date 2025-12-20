@@ -43,13 +43,13 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b-2 border-primary/30 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 armor-shadow">
+      <header className="sticky top-0 z-50 w-full border-b-2 border-accent/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 battle-damage-shadow">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 glitch-hover">
+          <Link to="/" className="flex items-center space-x-2 intense-glitch-hover">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-primary angular-border" />
-              <span className="text-xl font-bold tracking-wider text-primary">
+              <div className="h-8 w-8 bg-accent damaged-armor" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }} />
+              <span className="text-xl font-bold tracking-wider text-accent distressed-text">
                 HACKATHON
               </span>
             </div>
@@ -63,12 +63,12 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           {/* Mobile Menu Button */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="text-primary hover:bg-primary/10">
+              <Button variant="ghost" size="icon" className="text-accent hover:bg-accent/10">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64 bg-card border-l-2 border-primary/30">
+            <SheetContent side="right" className="w-64 bg-card border-l-2 border-accent/40 damaged-armor">
               <div className="flex flex-col space-y-4 mt-8">
                 <NavLinks mobile />
               </div>
@@ -81,25 +81,25 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="border-t-2 border-primary/30 bg-card battle-worn">
+      <footer className="border-t-2 border-accent/40 bg-card war-texture">
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4 text-primary">
-                Military Hackathon
+              <h3 className="text-lg font-bold mb-4 text-accent distressed-text">
+                Combat Hackathon
               </h3>
               <p className="text-sm text-muted-foreground">
-                Command Center for tactical innovation and strategic development.
+                Battlefield command center for tactical innovation and combat development.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4 text-primary">Quick Links</h3>
+              <h3 className="text-lg font-bold mb-4 text-accent distressed-text">Quick Links</h3>
               <ul className="space-y-2">
                 {navItems.map((item) => (
                   <li key={item.path}>
                     <Link
                       to={item.path}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-muted-foreground hover:text-accent transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -108,16 +108,16 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4 text-primary">Contact</h3>
+              <h3 className="text-lg font-bold mb-4 text-accent distressed-text">Contact</h3>
               <p className="text-sm text-muted-foreground">
-                Email: command@hackathon.mil
+                Email: warzone@hackathon.mil
                 <br />
-                Phone: +1 (555) 123-4567
+                Phone: +1 (555) WAR-ZONE
               </p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 Military Hackathon Command Center. All rights reserved.
+            © 2025 Combat Hackathon Battlefield Command. All rights reserved.
           </div>
         </div>
       </footer>

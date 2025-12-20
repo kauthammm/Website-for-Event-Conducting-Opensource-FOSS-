@@ -35,100 +35,111 @@ export default function HomePage() {
 
   return (
     <MainLayout>
-      {/* Hero Section with Military Background */}
-      <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image with Dark Overlay */}
+      {/* Hero Section with Intense Battlefield Background */}
+      <section className="relative min-h-[750px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://miaoda-edit-image.s3cdn.medo.dev/8cxv3mixab5t/IMG-8cy6knnu3gg0.png)',
+            filter: 'grayscale(30%) contrast(1.2) brightness(0.7)',
           }}
         />
         
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/75" />
+        {/* Very dark overlay for gritty effect */}
+        <div className="absolute inset-0 bg-black/85" />
         
-        {/* Tactical grid overlay */}
-        <div className="absolute inset-0 tactical-grid opacity-20" />
+        {/* Blood splatter overlay */}
+        <div className="absolute inset-0 blood-splatter" />
         
-        {/* Desert camo pattern overlay */}
-        <div className="absolute inset-0 desert-camo" />
+        {/* Bullet holes */}
+        <div className="absolute inset-0 bullet-holes" />
         
-        {/* Scan line effect */}
-        <div className="absolute inset-0 scan-line" />
+        {/* Combat grid overlay */}
+        <div className="absolute inset-0 combat-grid opacity-25" />
+        
+        {/* Smoke overlay */}
+        <div className="absolute inset-0 smoke-overlay" />
+        
+        {/* Shrapnel debris */}
+        <div className="absolute inset-0 shrapnel-debris" />
+        
+        {/* Explosion flash effect (subtle) */}
+        <div className="absolute top-10 right-20 w-32 h-32 explosion-flash opacity-20" />
+        <div className="absolute bottom-20 left-10 w-40 h-40 explosion-flash opacity-15" style={{ animationDelay: '1.5s' }} />
 
         {/* Hero content */}
         <div className="container relative z-10 mx-auto px-4 py-20 text-center">
-          <div className="mb-6 inline-block armor-plate">
-            <div className="px-6 py-3 border-2 border-primary/50 angular-border bg-black/40 backdrop-blur-sm">
-              <span className="text-sm font-bold text-primary tracking-widest">
-                ⚡ OPERATION ACTIVE
+          <div className="mb-6 inline-block damaged-armor">
+            <div className="px-6 py-3 border-2 border-accent/70 bg-black/60 backdrop-blur-sm cracked-armor">
+              <span className="text-sm font-bold text-accent tracking-widest distressed-text">
+                ⚠ WAR ZONE ACTIVE ⚠
               </span>
             </div>
           </div>
 
-          <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
-            <span className="text-primary glitch-hover">MILITARY HACKATHON</span>
+          <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight">
+            <span className="text-accent intense-glitch-hover distressed-text">COMBAT HACKATHON</span>
             <br />
-            <span className="text-foreground drop-shadow-lg">COMMAND CENTER</span>
+            <span className="text-foreground drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
           </h1>
 
-          <p className="text-lg xl:text-xl text-foreground/90 mb-8 max-w-2xl mx-auto drop-shadow-lg font-medium">
-            Deploy your skills in the ultimate tactical coding challenge. 
-            Strategic thinking meets innovative development.
+          <p className="text-lg xl:text-xl text-foreground/85 mb-8 max-w-2xl mx-auto drop-shadow-2xl font-medium">
+            Enter the war zone. Code under fire. Only the strongest survive.
           </p>
 
           <div className="flex flex-col xl:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/register">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 text-lg font-bold uppercase tracking-wider armor-shadow border-2 border-accent/50">
-                Deploy Now
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 text-lg font-bold uppercase tracking-wider battle-damage-shadow border-2 border-accent/70 damaged-armor">
+                <span className="distressed-text">Deploy to Combat</span>
               </Button>
             </Link>
             <Link to="/event">
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 py-7 text-lg font-bold uppercase tracking-wider armor-shadow bg-black/40 backdrop-blur-sm">
-                Mission Brief
+              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-10 py-7 text-lg font-bold uppercase tracking-wider battle-damage-shadow bg-black/50 backdrop-blur-sm cracked-armor">
+                <span className="distressed-text">Mission Intel</span>
               </Button>
             </Link>
           </div>
 
           {/* Countdown Timer */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 text-primary drop-shadow-lg">
-              MISSION COMMENCES IN
+            <h2 className="text-2xl font-bold mb-6 text-accent drop-shadow-2xl distressed-text">
+              COMBAT DEPLOYMENT IN
             </h2>
             <CountdownTimer targetDate={hackathonDate} />
           </div>
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 bg-background battle-worn">
+      <section className="py-20 bg-background war-texture">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 text-primary">
-            TACTICAL ADVANTAGES
+          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 text-accent distressed-text">
+            COMBAT ADVANTAGES
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="relative overflow-hidden border-2 border-border hover:border-primary transition-all duration-300 group armor-plate"
+                className="relative overflow-hidden border-2 border-border hover:border-accent transition-all duration-300 group damaged-armor bullet-holes"
               >
-                <div className="absolute top-0 right-0 w-12 h-12 bg-accent/20 angular-border" />
+                <div className="absolute top-0 right-0 w-16 h-16 bg-accent/30 opacity-50" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
+                <div className="absolute inset-0 blood-splatter opacity-20" />
                 
                 <CardHeader>
-                  <div className="mb-4 inline-block p-4 bg-primary/20 border border-primary/30 metallic-armor">
-                    <feature.icon className="h-8 w-8 text-primary" />
+                  <div className="mb-4 inline-block p-4 bg-accent/20 border border-accent/40 cracked-armor">
+                    <feature.icon className="h-8 w-8 text-accent" />
                   </div>
-                  <CardTitle className="text-xl text-foreground">{feature.title}</CardTitle>
+                  <CardTitle className="text-xl text-foreground distressed-text">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
                 
-                {/* Tactical grid overlay */}
-                <div className="absolute inset-0 tactical-grid opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                {/* Combat grid overlay */}
+                <div className="absolute inset-0 combat-grid opacity-0 group-hover:opacity-15 transition-opacity duration-300" />
                 
-                {/* Hover effect */}
-                <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Shrapnel on hover */}
+                <div className="absolute inset-0 shrapnel-debris opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Card>
             ))}
           </div>
@@ -137,21 +148,21 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-muted via-background to-card relative overflow-hidden">
-        <div className="absolute inset-0 tactical-grid opacity-30" />
-        <div className="absolute inset-0 desert-camo" />
+        <div className="absolute inset-0 combat-grid opacity-30" />
+        <div className="absolute inset-0 smoke-overlay" />
+        <div className="absolute inset-0 blood-splatter opacity-10" />
         
         <div className="container relative z-10 mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto armor-plate p-12 border-2 border-primary/30">
-            <h2 className="text-3xl xl:text-5xl font-bold mb-6 text-primary glitch-hover">
-              READY FOR DEPLOYMENT?
+          <div className="max-w-4xl mx-auto damaged-armor p-12 border-2 border-accent/50 bullet-holes cracked-armor">
+            <h2 className="text-3xl xl:text-5xl font-bold mb-6 text-accent intense-glitch-hover distressed-text">
+              READY FOR COMBAT?
             </h2>
             <p className="text-lg xl:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-              Join the ranks of elite developers and compete for glory. 
-              Registration is now open for all operatives.
+              Join the battlefield. Face the challenge. Prove your worth in the war zone.
             </p>
             <Link to="/register">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-7 text-xl font-bold uppercase tracking-wider armor-shadow border-2 border-accent/50">
-                Register Now
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-7 text-xl font-bold uppercase tracking-wider battle-damage-shadow border-2 border-accent/70 damaged-armor">
+                <span className="distressed-text">Enter War Zone</span>
               </Button>
             </Link>
           </div>

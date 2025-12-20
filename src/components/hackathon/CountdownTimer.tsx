@@ -47,17 +47,17 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
   return (
     <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 max-w-4xl mx-auto">
-      {timeUnits.map((unit, index) => (
+      {timeUnits.map((unit) => (
         <Card
           key={unit.label}
-          className="relative overflow-hidden armor-plate border-2 border-primary/50 p-6 text-center backdrop-blur-sm bg-black/40"
+          className="relative overflow-hidden damaged-armor border-2 border-accent/60 p-6 text-center backdrop-blur-sm bg-black/60 bullet-holes cracked-armor"
         >
-          {/* Angular corner accent */}
-          <div className="absolute top-0 right-0 w-10 h-10 bg-accent/30 angular-border" />
-          <div className="absolute bottom-0 left-0 w-10 h-10 bg-primary/20 angular-border rotate-180" />
+          {/* Blood splatter corner */}
+          <div className="absolute top-0 right-0 w-12 h-12 blood-splatter opacity-60" />
+          <div className="absolute bottom-0 left-0 w-12 h-12 blood-splatter opacity-50 rotate-180" />
           
           <div className="relative z-10">
-            <div className="text-4xl xl:text-5xl font-bold text-primary mb-2 font-mono drop-shadow-lg">
+            <div className="text-4xl xl:text-5xl font-bold text-accent mb-2 font-mono drop-shadow-2xl distressed-text">
               {String(unit.value).padStart(2, '0')}
             </div>
             <div className="text-xs xl:text-sm font-semibold text-foreground/70 tracking-widest">
@@ -65,11 +65,14 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
             </div>
           </div>
 
-          {/* Tactical grid background */}
-          <div className="absolute inset-0 tactical-grid opacity-30" />
+          {/* Combat grid background */}
+          <div className="absolute inset-0 combat-grid opacity-30" />
           
-          {/* Metallic shine effect */}
-          <div className="absolute inset-0 metallic-armor opacity-20" />
+          {/* War texture */}
+          <div className="absolute inset-0 war-texture opacity-40" />
+          
+          {/* Shrapnel debris */}
+          <div className="absolute inset-0 shrapnel-debris opacity-50" />
         </Card>
       ))}
     </div>
