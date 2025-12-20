@@ -60,7 +60,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           <div className="absolute inset-0 burn-marks opacity-30" />
           
           <div className="relative z-10">
-            <div className="text-4xl xl:text-5xl font-bold lightning-text mb-2 font-mono drop-shadow-2xl">
+            <div className="text-4xl xl:text-5xl font-bold text-[#FF6B00] mb-2 font-mono drop-shadow-2xl">
               {String(unit.value).padStart(2, '0')}
             </div>
             <div className="text-xs xl:text-sm font-semibold text-foreground/70 tracking-widest">

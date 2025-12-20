@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,6 +7,8 @@ import { Target, Users, Trophy, Code } from 'lucide-react';
 import MainLayout from '@/components/layouts/MainLayout';
 
 export default function HomePage() {
+  const [showStory, setShowStory] = useState(false);
+  
   // Set hackathon start date (example: 30 days from now)
   const hackathonDate = new Date();
   hackathonDate.setDate(hackathonDate.getDate() + 30);
@@ -76,44 +79,54 @@ export default function HomePage() {
         {/* Burn marks */}
         <div className="absolute inset-0 burn-marks opacity-15" />
         
-        {/* Lightning Strike Effects - Random positions */}
-        <div className="absolute top-10 right-20 w-2 h-96 lightning-strike opacity-0" />
-        <div className="absolute bottom-20 left-10 w-2 h-80 lightning-strike opacity-0" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 right-10 w-2 h-72 lightning-strike opacity-0" style={{ animationDelay: '4s' }} />
-        <div className="absolute bottom-10 left-1/3 w-2 h-88 lightning-strike opacity-0" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-20 left-1/4 w-2 h-64 lightning-strike opacity-0" style={{ animationDelay: '3.5s' }} />
+        {/* Flying Bullets - Multiple bullets passing across screen */}
+        <div className="absolute top-1/4 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '0s' }}>
+          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
+        </div>
+        <div className="absolute top-1/3 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '1.5s' }}>
+          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
+        </div>
+        <div className="absolute top-1/2 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '3s' }}>
+          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
+        </div>
+        <div className="absolute top-2/3 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '4.5s' }}>
+          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
+        </div>
+        <div className="absolute top-3/4 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '2s' }}>
+          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
+        </div>
 
-        {/* Story Narration Box */}
-        <div className="absolute right-10 top-20 z-20 hidden xl:block max-w-md">
-          <div className="story-narration p-6 relative scanline-effect backdrop-blur-md">
-            <div className="text-xs uppercase tracking-widest lightning-text mb-2 font-bold">
-              [ MISSION BRIEFING ]
-            </div>
-            <p className="text-sm text-white leading-relaxed font-mono">
-              <span className="lightning-text font-bold">Year 2025.</span> The digital battlefield awaits. 
-              Elite coders from across the globe converge for the ultimate combat challenge. 
-              <span className="lightning-text"> Your mission:</span> Deploy your skills, 
-              survive the code wars, and emerge victorious. 
-              <span className="lightning-text font-bold">No retreat. No surrender.</span>
-            </p>
-            <div className="mt-4 text-xs lightning-text font-mono">
-              &gt; STATUS: ACTIVE_WAR_ZONE
+        {/* Story Button */}
+        <div className="absolute right-10 top-20 z-20">
+          <Button 
+            onClick={() => setShowStory(!showStory)}
+            className="bg-[#FF6B00] hover:bg-[#FF6B00]/90 text-white px-6 py-3 text-sm font-bold uppercase tracking-wider border-2 border-[#FF6B00]"
+          >
+            {showStory ? '✕ Close Story' : '📖 Mission Brief'}
+          </Button>
+        </div>
+
+        {/* Running Subtitle Story Narration */}
+        {showStory && (
+          <div className="absolute bottom-0 left-0 right-0 z-30 py-4 bg-black/80 backdrop-blur-sm overflow-hidden">
+            <div className="running-subtitle">
+              <span className="text-[#FF6B00] font-bold">[ MISSION BRIEFING ]</span> Year 2025. The digital battlefield awaits. Elite coders from across the globe converge for the ultimate combat challenge. Your mission: Deploy your skills, survive the code wars, and emerge victorious. No retreat. No surrender. STATUS: ACTIVE_WAR_ZONE
             </div>
           </div>
-        </div>
+        )}
 
         {/* Hero content */}
         <div className="container relative z-10 mx-auto px-4 py-20 text-center">
           <div className="mb-6 inline-block damaged-armor blood-splatter">
             <div className="px-6 py-3 border-2 border-[#FF6B00] bg-black/80 backdrop-blur-sm cracked-armor bullet-holes">
-              <span className="text-sm font-bold lightning-text tracking-widest">
+              <span className="text-sm font-bold text-[#FF6B00] tracking-widest">
                 ☠ ACTIVE WAR ZONE ☠
               </span>
             </div>
           </div>
 
           <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
-            <span className="lightning-text intense-glitch-hover">COMBAT HACKATHON</span>
+            <span className="text-[#FF6B00] intense-glitch-hover">COMBAT HACKATHON</span>
             <br />
             <span className="text-white drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
           </h1>
@@ -137,7 +150,7 @@ export default function HomePage() {
 
           {/* Countdown Timer */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 lightning-text drop-shadow-2xl">
+            <h2 className="text-2xl font-bold mb-6 text-[#FF6B00] drop-shadow-2xl">
               ⏱ COMBAT DEPLOYMENT IN
             </h2>
             <CountdownTimer targetDate={hackathonDate} />
@@ -165,7 +178,7 @@ export default function HomePage() {
         <div className="absolute inset-0 dust-particles opacity-60" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 lightning-text">
+          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 text-[#FF6B00]">
             ⚡ COMBAT ADVANTAGES
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -226,7 +239,7 @@ export default function HomePage() {
         
         <div className="container relative z-10 mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto damaged-armor p-12 border-2 border-[#FF6B00]/60 bullet-holes cracked-armor blood-splatter shell-casings">
-            <h2 className="text-3xl xl:text-5xl font-bold mb-6 lightning-text intense-glitch-hover">
+            <h2 className="text-3xl xl:text-5xl font-bold mb-6 text-[#FF6B00] intense-glitch-hover">
               ☠ READY FOR COMBAT? ☠
             </h2>
             <p className="text-lg xl:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
