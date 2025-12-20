@@ -33,27 +33,26 @@
 
 ## Notes
 - **Frontend Only**: No backend database, uses localStorage for demo
-- **EXTREME War Zone Theme**: Ultra-realistic battlefield with heavy combat damage
+- **FULLY VISIBLE Background**: Tactical soldier image clearly visible with minimal overlays
+- **Neon Orange Theme**: All primary text and UI elements use glowing neon orange (#FF6B00)
+- **Floating Military Character**: Desert soldier floats on left side with smooth animation
+- **Game-Style Story Narration**: Mission briefing box with scanline effect on right side
 - **Multi-Image Battlefield**: Three tactical military images integrated across different sections
-  - Hero Section: Tactical soldier with rifle in combat-ready stance (main background)
-  - Features Section: Second military image as subtle background layer (10% opacity)
+  - Hero Section: Tactical soldier with rifle (FULLY VISIBLE - 20% grayscale, 90% brightness, 40% overlay)
+  - Features Section: Desert soldier as subtle background layer (20% opacity)
   - CTA Section: Third military image as background layer (15% opacity)
-- Color scheme: Blood Red (#8B1A1A), Dirty Tan (#8B7E66), Gunmetal Gray (#4A4A4A), Deep Black (#0F0F0F)
-- **Intense Effects**: 
-  - 7-layer blood splatters with gradient falloff
-  - 10 bullet holes with blood rings around impacts
-  - 8 shell casings scattered across surfaces
-  - 3 vertical blood drip streaks
-  - 5 diagonal armor cracks
-  - Dense 5-layer smoke overlay
-  - 3 burn marks from explosions
-  - 8 floating dust particles
-  - 10 shrapnel debris pieces
-  - 4 animated explosion flashes
-- Background filters: 45-50% grayscale, high contrast (1.3-1.4), dark brightness (50-60%), heavy black overlays (80-92%)
-- Text: Heavy distressed effects with multiple blood-red shadows
+- Color scheme: Neon Orange (#FF6B00), Pure White (#FFFFFF), Deep Black (#000000)
+- **Visual Effects**: 
+  - Neon orange glow with flicker animation
+  - Floating character animation (6-second cycle)
+  - Scanline effect on story narration box
+  - Subtle combat effects (20-30% opacity to show background)
+  - All effects reduced to maintain background visibility
+- Background filters: Minimal grayscale (20%), moderate contrast (1.2), bright (90%), light overlay (40%)
+- Text: Neon orange glow with animated flicker, white text with drop shadows
+- Story: "Year 2025. The digital battlefield awaits. Elite coders from across the globe converge for the ultimate combat challenge. Your mission: Deploy your skills, survive the code wars, and emerge victorious. No retreat. No surrender."
 - Emojis: ☠ (skull), ⚔ (swords), 📋 (clipboard), ⏱ (timer), ⚡ (lightning)
 - Registration data stored in browser localStorage
-- All pages and components updated with extreme realistic war zone theme
+- All pages and components updated with neon orange theme
 - All lint errors fixed
 - Project is ready for deployment

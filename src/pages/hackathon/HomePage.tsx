@@ -37,50 +37,50 @@ export default function HomePage() {
     <MainLayout>
       {/* Hero Section with EXTREME Battlefield Background */}
       <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden">
-        {/* Background Image - Tactical Soldier with Rifle */}
+        {/* Background Image - Tactical Soldier with Rifle - FULLY VISIBLE */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cz0a2evufb4.jpg)',
-            filter: 'grayscale(45%) contrast(1.4) brightness(0.5)',
+            filter: 'grayscale(20%) contrast(1.2) brightness(0.9)',
           }}
         />
         
-        {/* VERY dark overlay for extreme gritty effect */}
-        <div className="absolute inset-0 bg-black/92" />
+        {/* Light overlay to maintain readability */}
+        <div className="absolute inset-0 bg-black/40" />
         
-        {/* Heavy blood splatter overlay */}
-        <div className="absolute inset-0 blood-splatter opacity-80" />
+        {/* Subtle blood splatter overlay */}
+        <div className="absolute inset-0 blood-splatter opacity-20" />
         
         {/* Blood drips from top */}
-        <div className="absolute inset-0 blood-drips" />
+        <div className="absolute inset-0 blood-drips opacity-30" />
         
-        {/* Heavy bullet holes */}
-        <div className="absolute inset-0 bullet-holes" />
+        {/* Subtle bullet holes */}
+        <div className="absolute inset-0 bullet-holes opacity-30" />
         
         {/* Shell casings scattered */}
-        <div className="absolute inset-0 shell-casings" />
+        <div className="absolute inset-0 shell-casings opacity-25" />
         
         {/* Combat grid overlay */}
-        <div className="absolute inset-0 combat-grid opacity-30" />
+        <div className="absolute inset-0 combat-grid opacity-15" />
         
-        {/* Dense smoke overlay */}
-        <div className="absolute inset-0 smoke-overlay" />
+        {/* Light smoke overlay */}
+        <div className="absolute inset-0 smoke-overlay opacity-30" />
         
-        {/* Heavy shrapnel debris */}
-        <div className="absolute inset-0 shrapnel-debris opacity-70" />
+        {/* Subtle shrapnel debris */}
+        <div className="absolute inset-0 shrapnel-debris opacity-30" />
         
         {/* Dust particles */}
-        <div className="absolute inset-0 dust-particles" />
+        <div className="absolute inset-0 dust-particles opacity-25" />
         
         {/* Burn marks */}
-        <div className="absolute inset-0 burn-marks" />
+        <div className="absolute inset-0 burn-marks opacity-20" />
         
-        {/* Multiple explosion flashes */}
-        <div className="absolute top-10 right-20 w-40 h-40 explosion-flash opacity-30" />
-        <div className="absolute bottom-20 left-10 w-48 h-48 explosion-flash opacity-25" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 right-10 w-36 h-36 explosion-flash opacity-20" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-10 right-1/3 w-44 h-44 explosion-flash opacity-28" style={{ animationDelay: '0.5s' }} />
+        {/* Subtle explosion flashes */}
+        <div className="absolute top-10 right-20 w-40 h-40 explosion-flash opacity-10" />
+        <div className="absolute bottom-20 left-10 w-48 h-48 explosion-flash opacity-8" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/2 right-10 w-36 h-36 explosion-flash opacity-8" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-10 right-1/3 w-44 h-44 explosion-flash opacity-10" style={{ animationDelay: '0.5s' }} />
 
         {/* Floating Military Character */}
         <div className="absolute left-10 top-1/4 z-20 float-character hidden xl:block">
@@ -94,11 +94,11 @@ export default function HomePage() {
 
         {/* Story Narration Box */}
         <div className="absolute right-10 top-20 z-20 hidden xl:block max-w-md">
-          <div className="story-narration p-6 relative scanline-effect">
+          <div className="story-narration p-6 relative scanline-effect backdrop-blur-md">
             <div className="text-xs uppercase tracking-widest neon-orange-text mb-2 font-bold">
               [ MISSION BRIEFING ]
             </div>
-            <p className="text-sm text-foreground/90 leading-relaxed font-mono">
+            <p className="text-sm text-white leading-relaxed font-mono">
               <span className="neon-orange-text font-bold">Year 2025.</span> The digital battlefield awaits. 
               Elite coders from across the globe converge for the ultimate combat challenge. 
               <span className="neon-orange-text"> Your mission:</span> Deploy your skills, 
@@ -114,20 +114,20 @@ export default function HomePage() {
         {/* Hero content */}
         <div className="container relative z-10 mx-auto px-4 py-20 text-center">
           <div className="mb-6 inline-block damaged-armor blood-splatter">
-            <div className="px-6 py-3 border-2 border-accent/80 bg-black/70 backdrop-blur-sm cracked-armor bullet-holes">
+            <div className="px-6 py-3 border-2 border-[#FF6B00] bg-black/80 backdrop-blur-sm cracked-armor bullet-holes">
               <span className="text-sm font-bold neon-orange-text tracking-widest">
                 ☠ ACTIVE WAR ZONE ☠
               </span>
             </div>
           </div>
 
-          <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight">
+          <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
             <span className="neon-orange-text intense-glitch-hover">COMBAT HACKATHON</span>
             <br />
-            <span className="text-foreground drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
+            <span className="text-white drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
           </h1>
 
-          <p className="text-lg xl:text-xl text-foreground/85 mb-8 max-w-2xl mx-auto drop-shadow-2xl font-medium">
+          <p className="text-lg xl:text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-2xl font-medium">
             Enter the war zone. Code under fire. Only the strongest survive the battlefield.
           </p>
 
