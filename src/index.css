@@ -120,6 +120,45 @@
 }
 
 @layer utilities {
+  /* Neon Orange Text Effect - Vibrant Orange */
+  .neon-orange-text {
+    color: #FF8C00;
+    text-shadow: 
+      0 0 10px rgba(255, 140, 0, 1),
+      0 0 20px rgba(255, 140, 0, 1),
+      0 0 30px rgba(255, 165, 0, 1),
+      0 0 40px rgba(255, 120, 0, 1),
+      0 0 60px rgba(255, 140, 0, 0.8),
+      0 0 80px rgba(255, 100, 0, 0.6),
+      0 0 100px rgba(255, 80, 0, 0.4);
+    animation: neon-orange-pulse 2s ease-in-out infinite;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+
+  @keyframes neon-orange-pulse {
+    0%, 100% {
+      text-shadow: 
+        0 0 10px rgba(255, 140, 0, 1),
+        0 0 20px rgba(255, 140, 0, 1),
+        0 0 30px rgba(255, 165, 0, 1),
+        0 0 40px rgba(255, 120, 0, 1),
+        0 0 60px rgba(255, 140, 0, 0.8),
+        0 0 80px rgba(255, 100, 0, 0.6),
+        0 0 100px rgba(255, 80, 0, 0.4);
+    }
+    50% {
+      text-shadow: 
+        0 0 15px rgba(255, 140, 0, 1),
+        0 0 30px rgba(255, 140, 0, 1),
+        0 0 45px rgba(255, 165, 0, 1),
+        0 0 60px rgba(255, 120, 0, 1),
+        0 0 90px rgba(255, 140, 0, 1),
+        0 0 120px rgba(255, 100, 0, 0.8),
+        0 0 150px rgba(255, 80, 0, 0.6);
+    }
+  }
+
   /* Neon Cyan Text Effect - Vibrant Electric Blue */
   .neon-cyan-text {
     color: #00FFFF;
