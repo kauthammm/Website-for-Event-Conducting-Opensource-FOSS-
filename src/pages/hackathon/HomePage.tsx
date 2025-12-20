@@ -78,23 +78,6 @@ export default function HomePage() {
         
         {/* Burn marks */}
         <div className="absolute inset-0 burn-marks opacity-15" />
-        
-        {/* Flying Bullets - Multiple bullets passing across screen */}
-        <div className="absolute top-1/4 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '0s' }}>
-          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
-        </div>
-        <div className="absolute top-1/3 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '1.5s' }}>
-          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
-        </div>
-        <div className="absolute top-1/2 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '3s' }}>
-          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
-        </div>
-        <div className="absolute top-2/3 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '4.5s' }}>
-          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
-        </div>
-        <div className="absolute top-3/4 left-0 w-full h-8 flying-bullet" style={{ animationDelay: '2s' }}>
-          <img src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8czx5wygsb9c.png" alt="" className="h-6 w-auto opacity-80" />
-        </div>
 
         {/* Story Button */}
         <div className="absolute right-10 top-20 z-20">
@@ -110,7 +93,7 @@ export default function HomePage() {
         {showStory && (
           <div className="absolute bottom-0 left-0 right-0 z-30 py-4 bg-black/80 backdrop-blur-sm overflow-hidden">
             <div className="running-subtitle">
-              <span className="text-[#FF6B00] font-bold">[ MISSION BRIEFING ]</span> Year 2025. The digital battlefield awaits. Elite coders from across the globe converge for the ultimate combat challenge. Your mission: Deploy your skills, survive the code wars, and emerge victorious. No retreat. No surrender. STATUS: ACTIVE_WAR_ZONE
+              <span className="text-[#FF6B00] font-bold">[ MISSION BRIEFING - CLASSIFIED ]</span> ⚡ The year is 2025. Digital warfare has reached critical levels. Intelligence reports indicate a massive cyber threat approaching. Command has assembled the world's elite coders for Operation Code Storm. <span className="text-[#FF6B00] font-bold">YOUR MISSION:</span> Infiltrate the digital battlefield, deploy cutting-edge solutions, neutralize hostile algorithms, and secure victory for your squad. Time is running out. The enemy won't wait. <span className="text-[#FF6B00] font-bold">⚠ WARNING:</span> This is not a drill. Only the strongest will survive. Failure is not an option. <span className="text-[#FF6B00] font-bold">STATUS: DEFCON 1 - ACTIVE COMBAT ZONE</span> ⚡ All units report to deployment stations immediately. The fate of the digital world rests in your hands. Code or die. No retreat. No surrender. Victory is the only way out. <span className="text-[#FF6B00] font-bold">[ END TRANSMISSION ]</span>
             </div>
           </div>
         )}
