@@ -125,8 +125,25 @@ export default function HomePage() {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 bg-background war-texture blood-splatter">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-background war-texture blood-splatter relative overflow-hidden">
+        {/* Background Image Layer - Second Military Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{
+            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cywq1b2s1gg.jpg)',
+            filter: 'grayscale(50%) contrast(1.3)',
+          }}
+        />
+        
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/80" />
+        
+        {/* Combat effects */}
+        <div className="absolute inset-0 bullet-holes opacity-60" />
+        <div className="absolute inset-0 shell-casings opacity-50" />
+        <div className="absolute inset-0 smoke-overlay" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 text-accent distressed-text">
             ⚡ COMBAT ADVANTAGES
           </h2>
@@ -166,11 +183,25 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-muted via-background to-card relative overflow-hidden">
+        {/* Background Image Layer - Third Military Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          style={{
+            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cywq1b8e5uo.jpg)',
+            filter: 'grayscale(50%) contrast(1.4) brightness(0.6)',
+          }}
+        />
+        
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/85" />
+        
         <div className="absolute inset-0 combat-grid opacity-35" />
         <div className="absolute inset-0 smoke-overlay" />
         <div className="absolute inset-0 blood-splatter opacity-20" />
         <div className="absolute inset-0 burn-marks opacity-15" />
         <div className="absolute inset-0 dust-particles" />
+        <div className="absolute inset-0 bullet-holes opacity-50" />
+        <div className="absolute inset-0 shell-casings opacity-40" />
         
         <div className="container relative z-10 mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto damaged-armor p-12 border-2 border-accent/60 bullet-holes cracked-armor blood-splatter shell-casings">

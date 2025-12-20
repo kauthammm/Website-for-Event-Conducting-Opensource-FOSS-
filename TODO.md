@@ -34,7 +34,10 @@
 ## Notes
 - **Frontend Only**: No backend database, uses localStorage for demo
 - **EXTREME War Zone Theme**: Ultra-realistic battlefield with heavy combat damage
-- **NEW Background**: Tactical soldier with rifle in combat gear on pure black background
+- **Multi-Image Battlefield**: Three tactical military images integrated across different sections
+  - Hero Section: Tactical soldier with rifle in combat-ready stance (main background)
+  - Features Section: Second military image as subtle background layer (10% opacity)
+  - CTA Section: Third military image as background layer (15% opacity)
 - Color scheme: Blood Red (#8B1A1A), Dirty Tan (#8B7E66), Gunmetal Gray (#4A4A4A), Deep Black (#0F0F0F)
 - **Intense Effects**: 
   - 7-layer blood splatters with gradient falloff
@@ -47,7 +50,7 @@
   - 8 floating dust particles
   - 10 shrapnel debris pieces
   - 4 animated explosion flashes
-- Background: NEW tactical soldier image with 45% grayscale, maximum contrast (1.4), very dark (50% brightness, 92% black overlay)
+- Background filters: 45-50% grayscale, high contrast (1.3-1.4), dark brightness (50-60%), heavy black overlays (80-92%)
 - Text: Heavy distressed effects with multiple blood-red shadows
 - Emojis: ☠ (skull), ⚔ (swords), 📋 (clipboard), ⏱ (timer), ⚡ (lightning)
 - Registration data stored in browser localStorage
