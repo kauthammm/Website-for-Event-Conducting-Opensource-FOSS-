@@ -42,70 +42,61 @@ export default function HomePage() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cz0a2evufb4.jpg)',
-            filter: 'grayscale(20%) contrast(1.2) brightness(0.9)',
+            filter: 'grayscale(10%) contrast(1.15) brightness(1.0)',
           }}
         />
         
-        {/* Light overlay to maintain readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Very light overlay to maintain readability */}
+        <div className="absolute inset-0 bg-black/30" />
         
         {/* Subtle blood splatter overlay */}
-        <div className="absolute inset-0 blood-splatter opacity-20" />
+        <div className="absolute inset-0 blood-splatter opacity-15" />
         
         {/* Blood drips from top */}
-        <div className="absolute inset-0 blood-drips opacity-30" />
+        <div className="absolute inset-0 blood-drips opacity-20" />
         
         {/* Subtle bullet holes */}
-        <div className="absolute inset-0 bullet-holes opacity-30" />
+        <div className="absolute inset-0 bullet-holes opacity-20" />
         
         {/* Shell casings scattered */}
-        <div className="absolute inset-0 shell-casings opacity-25" />
+        <div className="absolute inset-0 shell-casings opacity-15" />
         
         {/* Combat grid overlay */}
-        <div className="absolute inset-0 combat-grid opacity-15" />
+        <div className="absolute inset-0 combat-grid opacity-10" />
         
         {/* Light smoke overlay */}
-        <div className="absolute inset-0 smoke-overlay opacity-30" />
+        <div className="absolute inset-0 smoke-overlay opacity-20" />
         
         {/* Subtle shrapnel debris */}
-        <div className="absolute inset-0 shrapnel-debris opacity-30" />
+        <div className="absolute inset-0 shrapnel-debris opacity-20" />
         
         {/* Dust particles */}
-        <div className="absolute inset-0 dust-particles opacity-25" />
+        <div className="absolute inset-0 dust-particles opacity-15" />
         
         {/* Burn marks */}
-        <div className="absolute inset-0 burn-marks opacity-20" />
+        <div className="absolute inset-0 burn-marks opacity-15" />
         
-        {/* Subtle explosion flashes */}
-        <div className="absolute top-10 right-20 w-40 h-40 explosion-flash opacity-10" />
-        <div className="absolute bottom-20 left-10 w-48 h-48 explosion-flash opacity-8" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 right-10 w-36 h-36 explosion-flash opacity-8" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-10 right-1/3 w-44 h-44 explosion-flash opacity-10" style={{ animationDelay: '0.5s' }} />
-
-        {/* Floating Military Character */}
-        <div className="absolute left-10 top-1/4 z-20 float-character hidden xl:block">
-          <img 
-            src="https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cz0e0h3y77k.png"
-            alt="Military Character"
-            className="w-64 h-auto opacity-60 drop-shadow-2xl"
-            style={{ filter: 'drop-shadow(0 0 20px rgba(255, 107, 0, 0.5))' }}
-          />
-        </div>
+        {/* Lightning Strike Effects - Random positions */}
+        <div className="absolute top-10 right-20 w-2 h-96 lightning-strike opacity-0" />
+        <div className="absolute bottom-20 left-10 w-2 h-80 lightning-strike opacity-0" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 right-10 w-2 h-72 lightning-strike opacity-0" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-10 left-1/3 w-2 h-88 lightning-strike opacity-0" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-20 left-1/4 w-2 h-64 lightning-strike opacity-0" style={{ animationDelay: '3.5s' }} />
 
         {/* Story Narration Box */}
         <div className="absolute right-10 top-20 z-20 hidden xl:block max-w-md">
           <div className="story-narration p-6 relative scanline-effect backdrop-blur-md">
-            <div className="text-xs uppercase tracking-widest neon-orange-text mb-2 font-bold">
+            <div className="text-xs uppercase tracking-widest lightning-text mb-2 font-bold">
               [ MISSION BRIEFING ]
             </div>
             <p className="text-sm text-white leading-relaxed font-mono">
-              <span className="neon-orange-text font-bold">Year 2025.</span> The digital battlefield awaits. 
+              <span className="lightning-text font-bold">Year 2025.</span> The digital battlefield awaits. 
               Elite coders from across the globe converge for the ultimate combat challenge. 
-              <span className="neon-orange-text"> Your mission:</span> Deploy your skills, 
+              <span className="lightning-text"> Your mission:</span> Deploy your skills, 
               survive the code wars, and emerge victorious. 
-              <span className="neon-orange-text font-bold">No retreat. No surrender.</span>
+              <span className="lightning-text font-bold">No retreat. No surrender.</span>
             </p>
-            <div className="mt-4 text-xs neon-orange-text font-mono">
+            <div className="mt-4 text-xs lightning-text font-mono">
               &gt; STATUS: ACTIVE_WAR_ZONE
             </div>
           </div>
@@ -115,14 +106,14 @@ export default function HomePage() {
         <div className="container relative z-10 mx-auto px-4 py-20 text-center">
           <div className="mb-6 inline-block damaged-armor blood-splatter">
             <div className="px-6 py-3 border-2 border-[#FF6B00] bg-black/80 backdrop-blur-sm cracked-armor bullet-holes">
-              <span className="text-sm font-bold neon-orange-text tracking-widest">
+              <span className="text-sm font-bold lightning-text tracking-widest">
                 ☠ ACTIVE WAR ZONE ☠
               </span>
             </div>
           </div>
 
           <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
-            <span className="neon-orange-text intense-glitch-hover">COMBAT HACKATHON</span>
+            <span className="lightning-text intense-glitch-hover">COMBAT HACKATHON</span>
             <br />
             <span className="text-white drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
           </h1>
@@ -146,7 +137,7 @@ export default function HomePage() {
 
           {/* Countdown Timer */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-6 neon-orange-text drop-shadow-2xl">
+            <h2 className="text-2xl font-bold mb-6 lightning-text drop-shadow-2xl">
               ⏱ COMBAT DEPLOYMENT IN
             </h2>
             <CountdownTimer targetDate={hackathonDate} />
@@ -174,7 +165,7 @@ export default function HomePage() {
         <div className="absolute inset-0 dust-particles opacity-60" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 neon-orange-text">
+          <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 lightning-text">
             ⚡ COMBAT ADVANTAGES
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -235,7 +226,7 @@ export default function HomePage() {
         
         <div className="container relative z-10 mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto damaged-armor p-12 border-2 border-[#FF6B00]/60 bullet-holes cracked-armor blood-splatter shell-casings">
-            <h2 className="text-3xl xl:text-5xl font-bold mb-6 neon-orange-text intense-glitch-hover">
+            <h2 className="text-3xl xl:text-5xl font-bold mb-6 lightning-text intense-glitch-hover">
               ☠ READY FOR COMBAT? ☠
             </h2>
             <p className="text-lg xl:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
