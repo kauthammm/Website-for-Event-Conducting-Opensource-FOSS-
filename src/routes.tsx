@@ -1,4 +1,8 @@
-import SamplePage from './pages/SamplePage';
+import HomePage from './pages/hackathon/HomePage';
+import EventPage from './pages/hackathon/EventPage';
+import RegisterPage from './pages/hackathon/RegisterPage';
+import PrizesPage from './pages/hackathon/PrizesPage';
+import ContactPage from './pages/hackathon/ContactPage';
 import type { ReactNode } from 'react';
 
 interface RouteConfig {
@@ -10,9 +14,29 @@ interface RouteConfig {
 
 const routes: RouteConfig[] = [
   {
-    name: 'Sample Page',
+    name: 'Home',
     path: '/',
-    element: <SamplePage />
+    element: <HomePage />
+  },
+  {
+    name: 'Event Info',
+    path: '/event',
+    element: <EventPage />
+  },
+  {
+    name: 'Register',
+    path: '/register',
+    element: <RegisterPage />
+  },
+  {
+    name: 'Prizes',
+    path: '/prizes',
+    element: <PrizesPage />
+  },
+  {
+    name: 'Contact',
+    path: '/contact',
+    element: <ContactPage />
   }
 ];
 
