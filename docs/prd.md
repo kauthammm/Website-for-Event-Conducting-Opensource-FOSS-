@@ -2,27 +2,31 @@
 
 ## 1. Website Name
 Military Hackathon Command Center
-
-## 2. Website Description
-A military-themed website designed for hosting and managing a hackathon event. The site serves as the central hub for participants to register, view event details, and access competition information with an intense, tactical visual experience.
+\n## 2. Website Description\nA military-themed frontend website designed for hosting and managing a hackathon event. The site serves as the central hub for participants to view event details, access competition information, and submit registration interest with an intense, tactical visual experience. This is a pure frontend application with static content display and form interfaces.
 
 ## 3. Website Features
 \n### 3.1 Homepage
 - Hero section with bold military-style banner and event title
 - Countdown timer to hackathon start
 - Quick registration call-to-action button
-- Brief event overview\n\n### 3.2 Event Information
+- Brief event overview
+
+### 3.2 Event Information
 - Hackathon schedule and timeline
-- Competition rules and guidelines
-- Challenge themes and categories
-- Judging criteria\n\n### 3.3 Registration
-- Participant registration form (name, email, team name, skills)
-- Team formation options\n- Registration confirmation\n\n### 3.4 Prize & Rewards
-- Prize pool breakdown
+- Competition rules and guidelines\n- Challenge themes and categories
+- Judging criteria
+\n### 3.3 Registration Form
+- Participant registration form interface (name, email, team name, skills)
+- Team formation input fields
+- Form submission button
+
+### 3.4 Prize & Rewards
+- Prize pool breakdown display
 - Award categories
 - Sponsor information
-\n### 3.5 Contact & Support
-- Organizer contact information
+
+### 3.5 Contact & Support
+- Organizer contact information display
 - FAQ section
 - Technical support details
 

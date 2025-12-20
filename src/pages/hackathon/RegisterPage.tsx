@@ -6,8 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { createRegistration, checkEmailExists } from '@/db/api';
-import type { RegistrationInput } from '@/types';
 import { Loader2, CheckCircle2 } from 'lucide-react';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
@@ -41,9 +39,16 @@ export default function RegisterPage() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
     try {
+      // Store in localStorage for demo purposes
+      const registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
+      
       // Check if email already exists
-      const emailExists = await checkEmailExists(data.email);
+      const emailExists = registrations.some((reg: FormData) => reg.email === data.email);
       if (emailExists) {
         toast({
           title: 'Registration Failed',
@@ -54,14 +59,13 @@ export default function RegisterPage() {
         return;
       }
 
-      // Create registration with properly typed data
-      const registrationData: RegistrationInput = {
-        name: data.name,
-        email: data.email,
-        team_name: data.team_name,
-        skills: data.skills,
-      };
-      await createRegistration(registrationData);
+      // Add new registration
+      registrations.push({
+        ...data,
+        id: Date.now().toString(),
+        created_at: new Date().toISOString(),
+      });
+      localStorage.setItem('registrations', JSON.stringify(registrations));
       
       setIsSuccess(true);
       toast({
@@ -78,7 +82,7 @@ export default function RegisterPage() {
     } catch (error) {
       toast({
         title: 'Deployment Failed',
-        description: error instanceof Error ? error.message : 'Failed to register. Please try again.',
+        description: 'Failed to register. Please try again.',
         variant: 'destructive',
       });
     } finally {
@@ -241,3 +245,4 @@ export default function RegisterPage() {
     </MainLayout>
   );
 }
+
