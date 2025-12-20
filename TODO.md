@@ -1,25 +1,28 @@
-# Task: Build Combat Hackathon Battlefield Website (Frontend Only) - Gritty War Zone Theme
+# Task: Build EXTREME Combat Hackathon Battlefield Website - Ultra-Realistic War Zone
 
 ## Plan
 - [x] Step 1: Design System Setup (Completed)
-  - [x] Create gritty war zone color system with blood red accents
-  - [x] Update tailwind.config.js with desaturated combat colors
+  - [x] Create ultra-gritty war zone color system with blood red accents
+  - [x] Update tailwind.config.js with heavily desaturated combat colors
   - [x] Add military stencil fonts (Orbitron, Rajdhani)
-  - [x] Create blood-splatter, bullet-holes, cracked-armor utility classes
-  - [x] Add explosion-flash, muzzle-flash, blood-drip animations
-  - [x] Create damaged-armor, war-texture, shrapnel-debris effects
+  - [x] Create INTENSE blood-splatter (7 layers), bullet-holes (10 impacts), cracked-armor (5 cracks)
+  - [x] Add shell-casings, blood-drips, burn-marks, dust-particles effects
+  - [x] Create explosion-flash, muzzle-flash, blood-drip animations
+  - [x] Enhanced damaged-armor, war-texture, shrapnel-debris (10 pieces)
 - [x] Step 2: Page Structure (Completed)
-  - [x] Update Homepage with intense battlefield effects
-  - [x] Add blood splatters, bullet holes, smoke overlays
+  - [x] Update Homepage with EXTREME battlefield effects (15+ layers)
+  - [x] Add heavy blood splatters, bullet holes with blood rings, shell casings
+  - [x] Add blood drips, burn marks, dust particles, dense smoke
+  - [x] Add 4 explosion flashes with staggered timing
   - [x] Create Event Information page
   - [x] Create Registration page with form
   - [x] Create Prizes page
   - [x] Create Contact/FAQ page
 - [x] Step 3: Components Development (Completed)
-  - [x] Update Layout with battle damage theme
-  - [x] Update CountdownTimer with combat effects
+  - [x] Update Layout with heavy battle damage theme
+  - [x] Update CountdownTimer with extreme combat effects (8 layers)
   - [x] Update RegistrationForm with localStorage
-  - [x] Apply war-torn UI components throughout
+  - [x] Apply ultra-realistic war-torn UI throughout
 - [x] Step 4: Routes and Integration (Completed)
   - [x] Update routes.tsx with all pages
   - [x] Implement navigation
@@ -30,12 +33,23 @@
 
 ## Notes
 - **Frontend Only**: No backend database, uses localStorage for demo
-- **Gritty War Zone Theme**: Intense battlefield atmosphere with realistic combat effects
+- **EXTREME War Zone Theme**: Ultra-realistic battlefield with heavy combat damage
 - Color scheme: Blood Red (#8B1A1A), Dirty Tan (#8B7E66), Gunmetal Gray (#4A4A4A), Deep Black (#0F0F0F)
-- Effects: Blood splatters, bullet holes, cracked armor, smoke overlays, shrapnel debris, explosion flashes
-- Background: Military soldier image with heavy desaturation and dark overlay
-- Text: Distressed text effects with battle damage shadows
+- **Intense Effects**: 
+  - 7-layer blood splatters with gradient falloff
+  - 10 bullet holes with blood rings around impacts
+  - 8 shell casings scattered across surfaces
+  - 3 vertical blood drip streaks
+  - 5 diagonal armor cracks
+  - Dense 5-layer smoke overlay
+  - 3 burn marks from explosions
+  - 8 floating dust particles
+  - 10 shrapnel debris pieces
+  - 4 animated explosion flashes
+- Background: Military soldier image with 40% grayscale, high contrast, very dark (90% black overlay)
+- Text: Heavy distressed effects with multiple blood-red shadows
+- Emojis: ☠ (skull), ⚔ (swords), 📋 (clipboard), ⏱ (timer), ⚡ (lightning)
 - Registration data stored in browser localStorage
-- All pages and components updated with intense war zone theme
+- All pages and components updated with extreme realistic war zone theme
 - All lint errors fixed
 - Project is ready for deployment

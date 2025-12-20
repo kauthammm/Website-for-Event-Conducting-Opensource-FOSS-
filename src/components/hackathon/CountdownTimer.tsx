@@ -50,11 +50,14 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
       {timeUnits.map((unit) => (
         <Card
           key={unit.label}
-          className="relative overflow-hidden damaged-armor border-2 border-accent/60 p-6 text-center backdrop-blur-sm bg-black/60 bullet-holes cracked-armor"
+          className="relative overflow-hidden damaged-armor border-2 border-accent/70 p-6 text-center backdrop-blur-sm bg-black/70 bullet-holes cracked-armor shell-casings blood-splatter"
         >
-          {/* Blood splatter corner */}
-          <div className="absolute top-0 right-0 w-12 h-12 blood-splatter opacity-60" />
-          <div className="absolute bottom-0 left-0 w-12 h-12 blood-splatter opacity-50 rotate-180" />
+          {/* Heavy blood splatter corners */}
+          <div className="absolute top-0 right-0 w-16 h-16 blood-splatter opacity-80" />
+          <div className="absolute bottom-0 left-0 w-16 h-16 blood-splatter opacity-70 rotate-180" />
+          
+          {/* Burn marks */}
+          <div className="absolute inset-0 burn-marks opacity-30" />
           
           <div className="relative z-10">
             <div className="text-4xl xl:text-5xl font-bold text-accent mb-2 font-mono drop-shadow-2xl distressed-text">
@@ -66,13 +69,16 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           </div>
 
           {/* Combat grid background */}
-          <div className="absolute inset-0 combat-grid opacity-30" />
+          <div className="absolute inset-0 combat-grid opacity-35" />
           
           {/* War texture */}
-          <div className="absolute inset-0 war-texture opacity-40" />
+          <div className="absolute inset-0 war-texture opacity-50" />
           
-          {/* Shrapnel debris */}
-          <div className="absolute inset-0 shrapnel-debris opacity-50" />
+          {/* Heavy shrapnel debris */}
+          <div className="absolute inset-0 shrapnel-debris opacity-60" />
+          
+          {/* Dust particles */}
+          <div className="absolute inset-0 dust-particles opacity-40" />
         </Card>
       ))}
     </div>
