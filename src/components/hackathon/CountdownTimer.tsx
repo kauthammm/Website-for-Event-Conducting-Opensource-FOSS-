@@ -50,22 +50,26 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
       {timeUnits.map((unit, index) => (
         <Card
           key={unit.label}
-          className="relative overflow-hidden bg-card border-2 border-primary p-6 text-center"
+          className="relative overflow-hidden armor-plate border-2 border-primary/50 p-6 text-center backdrop-blur-sm bg-black/40"
         >
           {/* Angular corner accent */}
-          <div className="absolute top-0 right-0 w-8 h-8 bg-accent clip-path-[polygon(100%_0,0_0,100%_100%)]" />
+          <div className="absolute top-0 right-0 w-10 h-10 bg-accent/30 angular-border" />
+          <div className="absolute bottom-0 left-0 w-10 h-10 bg-primary/20 angular-border rotate-180" />
           
           <div className="relative z-10">
-            <div className="text-4xl xl:text-5xl font-bold text-primary mb-2 font-mono">
+            <div className="text-4xl xl:text-5xl font-bold text-primary mb-2 font-mono drop-shadow-lg">
               {String(unit.value).padStart(2, '0')}
             </div>
-            <div className="text-xs xl:text-sm font-semibold text-muted-foreground tracking-widest">
+            <div className="text-xs xl:text-sm font-semibold text-foreground/70 tracking-widest">
               {unit.label}
             </div>
           </div>
 
           {/* Tactical grid background */}
-          <div className="absolute inset-0 tactical-grid opacity-20" />
+          <div className="absolute inset-0 tactical-grid opacity-30" />
+          
+          {/* Metallic shine effect */}
+          <div className="absolute inset-0 metallic-armor opacity-20" />
         </Card>
       ))}
     </div>

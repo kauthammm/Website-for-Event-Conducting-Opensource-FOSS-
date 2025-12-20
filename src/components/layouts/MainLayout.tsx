@@ -41,14 +41,14 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   );
 
   return (
-    <div className="flex min-h-screen w-full flex-col">
+    <div className="flex min-h-screen w-full flex-col bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
+      <header className="sticky top-0 z-50 w-full border-b-2 border-primary/30 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 armor-shadow">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 glitch-hover">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-primary clip-path-[polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)]" />
+              <div className="h-8 w-8 bg-primary angular-border" />
               <span className="text-xl font-bold tracking-wider text-primary">
                 HACKATHON
               </span>
@@ -63,12 +63,12 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
           {/* Mobile Menu Button */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-primary hover:bg-primary/10">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64 bg-card">
+            <SheetContent side="right" className="w-64 bg-card border-l-2 border-primary/30">
               <div className="flex flex-col space-y-4 mt-8">
                 <NavLinks mobile />
               </div>
@@ -81,7 +81,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card">
+      <footer className="border-t-2 border-primary/30 bg-card battle-worn">
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
