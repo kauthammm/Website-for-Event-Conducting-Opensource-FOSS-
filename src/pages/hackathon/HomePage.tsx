@@ -37,17 +37,17 @@ export default function HomePage() {
     <MainLayout>
       {/* Hero Section with EXTREME Battlefield Background */}
       <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - NEW Tactical Soldier */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://miaoda-edit-image.s3cdn.medo.dev/8cxv3mixab5t/IMG-8cy6knnu3gg0.png)',
-            filter: 'grayscale(40%) contrast(1.3) brightness(0.6)',
+            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cywq1aoqlmo.jpg)',
+            filter: 'grayscale(45%) contrast(1.4) brightness(0.5)',
           }}
         />
         
         {/* VERY dark overlay for extreme gritty effect */}
-        <div className="absolute inset-0 bg-black/90" />
+        <div className="absolute inset-0 bg-black/92" />
         
         {/* Heavy blood splatter overlay */}
         <div className="absolute inset-0 blood-splatter opacity-80" />

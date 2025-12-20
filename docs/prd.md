@@ -2,35 +2,46 @@
 
 ## 1. Website Name
 Military Hackathon Command Center
-\n## 2. Website Description\nA military-themed frontend website designed for hosting and managing a hackathon event. The site serves as the central hub for participants to view event details, access competition information, and submit registration interest with an intense, tactical visual experience. This is a pure frontend application with static content display and form interfaces.
+
+## 2. Website Description
+An intense, battlefield-themed frontend website designed for hosting a military hackathon event. The site immerses participants in a realistic combat environment with gritty visuals, bullet-point formatting, and tactical imagery. This pure frontend application delivers static content with a visceral, high-stakes atmosphere that captures the intensity of military operations.
 
 ## 3. Website Features
 \n### 3.1 Homepage
-- Hero section with bold military-style banner and event title
-- Countdown timer to hackathon start
-- Quick registration call-to-action button
-- Brief event overview
+• Hero section featuring image.png as dramatic battlefield background with bold event title overlay
+• Live countdown timer styled as mission clock
+• Urgent'ENLIST NOW' call-to-action button with bullet casing design
+• Mission briefing overview presented in bullet points
+\n### 3.2 Event Information
+• Hackathon operation schedule displayed as mission timeline
+• Competition rules formatted as tactical directives with bullet points:\n  - Engagement protocols
+  - Team formation requirements
+  - Submission deadlines
+  - Code of conduct
+• Challenge categories presented as combat missions
+• Judging criteria listed as evaluation parameters
 
-### 3.2 Event Information
-- Hackathon schedule and timeline
-- Competition rules and guidelines\n- Challenge themes and categories
-- Judging criteria
-\n### 3.3 Registration Form
-- Participant registration form interface (name, email, team name, skills)
-- Team formation input fields
-- Form submission button
-
-### 3.4 Prize & Rewards
-- Prize pool breakdown display
-- Award categories
-- Sponsor information
+### 3.3 Registration Form
+• Soldier enlistment form interface with fields:\n  - Operative name
+  - Contact coordinates (email)\n  - Squad designation (team name)
+  - Tactical skills inventory
+• Team assembly input section
+• 'DEPLOY' submission button\n\n### 3.4 Prize & Rewards
+• Mission rewards breakdown in bullet format:
+  - First strike prize
+  - Tactical excellence award
+  - Innovation commendation
+• Sponsor battalion information
+• Victory spoils display
 
 ### 3.5 Contact & Support
-- Organizer contact information display
-- FAQ section
-- Technical support details
-
-## 4. Design Style
-\n- **Color Scheme**: Dark military palette with olive green (#4A5D23), tactical black (#1A1A1A), camouflage brown (#6B5D4F), and alert red (#8B0000) accents for call-to-action elements
-- **Visual Details**: Sharp angular borders, hexagonal button shapes, stencil-style fonts for headings, subtle camouflage pattern overlays, metallic texture effects on key elements
-- **Layout**: Grid-based tactical layout with clearly defined sections, command-center inspired dashboard feel, bold typography hierarchy with military stencil fonts
+• Command center contact details in bullet list\n• Frequently asked questions formatted as tactical Q&A
+• Technical support coordinates
+\n## 4. Visual Assets
+• Background image: image.png (desert combat soldier scene for hero section)
+• Secondary imagery: WhatsApp Image 2025-12-20 at 1.28.08 PM.jpeg (tactical operator for event information section)
+\n## 5. Design Style
+\n• **Color Scheme**: Gritty battlefield palette with desert tan (#C19A6B), gunmetal gray (#2C3539), blood red (#8B0000) for alerts and CTAs, smoke black (#0D0D0D) for backgrounds, brass bullet gold (#B5A642) for accents
+• **Visual Details**: Distressed textures with scratches and wear marks, bullet hole effects on borders, spent shell casing icons for bullet points, razor wire dividers between sections, dog tag styled badges, blood splatter accents (subtle, artistic), weathered metal textures on buttons and panels
+• **Layout**: Tactical briefing document structure with all content in bullet-point format, command dossier aesthetic with stamped classifications, rugged typography using military stencil fonts (headers) and typewriter-style fonts (body text), asymmetric grid suggesting battlefield chaos while maintaining readability
+• **Interactive Elements**: Bullet casings as list markers, crosshair hover effects, shell ejection animations on button clicks, flickering light effects suggesting combat conditions
