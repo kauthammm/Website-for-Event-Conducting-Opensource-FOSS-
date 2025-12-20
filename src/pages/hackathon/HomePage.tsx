@@ -118,7 +118,7 @@ export default function HomePage() {
           <h1 className="text-4xl xl:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
             <span className="text-[#FF6B00] intense-glitch-hover">COMBAT HACKATHON</span>
             <br />
-            <span className="text-white drop-shadow-2xl distressed-text">BATTLEFIELD COMMAND</span>
+            <span className="text-white drop-shadow-2xl distressed-text">I'M GOING INN</span>
           </h1>
 
           <p className="text-lg xl:text-xl text-white mb-8 max-w-2xl mx-auto drop-shadow-2xl font-medium">
