@@ -79,6 +79,13 @@ export default function HomePage() {
         {/* Burn marks */}
         <div className="absolute inset-0 burn-marks opacity-15" />
 
+        {/* Red Lightning Strikes - Multiple positions */}
+        <div className="absolute top-0 left-1/4 w-1 h-full red-lightning opacity-0" style={{ animationDelay: '0s' }} />
+        <div className="absolute top-0 right-1/3 w-1 h-full red-lightning opacity-0" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-0 left-2/3 w-1 h-full red-lightning opacity-0" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-0 right-1/4 w-1 h-full red-lightning opacity-0" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-0 left-1/2 w-1 h-full red-lightning opacity-0" style={{ animationDelay: '3.5s' }} />
+
         {/* Story Button */}
         <div className="absolute right-10 top-20 z-20">
           <Button 

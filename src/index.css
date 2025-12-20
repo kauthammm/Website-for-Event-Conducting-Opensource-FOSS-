@@ -120,6 +120,78 @@
 }
 
 @layer utilities {
+  /* Red Lightning Strike Animation */
+  @keyframes red-lightning-strike {
+    0%, 100% { 
+      opacity: 0;
+      box-shadow: none;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.5% {
+      opacity: 1;
+      box-shadow: 
+        0 0 10px rgba(255, 50, 50, 1),
+        0 0 20px rgba(255, 100, 50, 1),
+        0 0 30px rgba(255, 50, 50, 0.8),
+        0 0 40px rgba(255, 100, 50, 0.6),
+        0 0 60px rgba(255, 50, 50, 0.4);
+    }
+    11% {
+      opacity: 0.3;
+      box-shadow: 
+        0 0 5px rgba(255, 50, 50, 0.5),
+        0 0 10px rgba(255, 100, 50, 0.3);
+    }
+    11.5% {
+      opacity: 1;
+      box-shadow: 
+        0 0 15px rgba(255, 255, 255, 1),
+        0 0 30px rgba(255, 50, 50, 1),
+        0 0 45px rgba(255, 100, 50, 1),
+        0 0 60px rgba(255, 50, 50, 0.8),
+        0 0 80px rgba(255, 100, 50, 0.6);
+    }
+    12% {
+      opacity: 0.4;
+      box-shadow: 
+        0 0 8px rgba(255, 50, 50, 0.6),
+        0 0 15px rgba(255, 100, 50, 0.4);
+    }
+    12.5% {
+      opacity: 1;
+      box-shadow: 
+        0 0 20px rgba(255, 255, 255, 1),
+        0 0 40px rgba(255, 50, 50, 1),
+        0 0 60px rgba(255, 100, 50, 1),
+        0 0 80px rgba(255, 50, 50, 0.8);
+    }
+    13% {
+      opacity: 0;
+      box-shadow: none;
+    }
+  }
+
+  .red-lightning {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 100, 50, 1) 10%,
+      rgba(255, 50, 50, 1) 20%,
+      rgba(255, 100, 50, 0.9) 30%,
+      rgba(255, 50, 50, 0.8) 40%,
+      rgba(255, 100, 50, 0.6) 50%,
+      rgba(255, 50, 50, 0.4) 60%,
+      rgba(255, 100, 50, 0.3) 70%,
+      rgba(255, 50, 50, 0.2) 80%,
+      rgba(255, 100, 50, 0.1) 90%,
+      transparent 100%
+    );
+    animation: red-lightning-strike 6s infinite;
+    filter: blur(2px);
+    transform-origin: top;
+  }
+
   /* Flying bullet animation */
   @keyframes fly-bullet {
     0% {
