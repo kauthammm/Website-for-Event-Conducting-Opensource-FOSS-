@@ -37,11 +37,11 @@ export default function HomePage() {
     <MainLayout>
       {/* Hero Section with EXTREME Battlefield Background */}
       <section className="relative min-h-[800px] flex items-center justify-center overflow-hidden">
-        {/* Background Image - NEW Tactical Soldier */}
+        {/* Background Image - Tactical Soldier with Rifle */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cywq1aoqlmo.jpg)',
+            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cz0a2evufb4.jpg)',
             filter: 'grayscale(45%) contrast(1.4) brightness(0.5)',
           }}
         />
@@ -126,22 +126,23 @@ export default function HomePage() {
       </section>
       {/* Features Section */}
       <section className="py-20 bg-background war-texture blood-splatter relative overflow-hidden">
-        {/* Background Image Layer - Second Military Image */}
+        {/* Background Image Layer - Desert Soldier */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{
-            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cywq1b2s1gg.jpg)',
-            filter: 'grayscale(50%) contrast(1.3)',
+            backgroundImage: 'url(https://miaoda-conversation-file.s3cdn.medo.dev/user-88xff9huyhog/conv-8cxv3mixab5s/20251220/file-8cz0e0h3y77k.png)',
+            filter: 'grayscale(40%) contrast(1.3) brightness(0.7)',
           }}
         />
         
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/75" />
         
         {/* Combat effects */}
         <div className="absolute inset-0 bullet-holes opacity-60" />
         <div className="absolute inset-0 shell-casings opacity-50" />
         <div className="absolute inset-0 smoke-overlay" />
+        <div className="absolute inset-0 dust-particles opacity-60" />
         
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl xl:text-4xl font-bold text-center mb-12 text-accent distressed-text">
