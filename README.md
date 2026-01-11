@@ -6,7 +6,7 @@
 
 ## Overview
 
-The Miaoda Event Management Application is a web-based platform designed to manage and conduct events efficiently. It is built with modern frontend technologies and uses a cloud-based backend for scalability and reliability. The project follows a clean and modular architecture, making it easy to understand, extend, and maintain.
+The Militry based  Event Management Application is a web-based platform designed to manage and conduct events efficiently. It is built with modern frontend technologies and uses a cloud-based backend for scalability and reliability. The project follows a clean and modular architecture, making it easy to understand, extend, and maintain.
 
 ---
 
