@@ -19,7 +19,7 @@ export default function ContactPage() {
     },
     {
       question: 'Is there a registration fee?',
-      answer: 'No, registration is completely free. All participants will receive free meals, swag, and access to mentors and workshops.',
+      answer: 'No, registration is completely free. All soldiers will receive free meals, swag, and access to mentors and workshops.',
     },
     {
       question: 'Can I work on an existing project?',
@@ -27,7 +27,7 @@ export default function ContactPage() {
     },
     {
       question: 'What if I need to leave early?',
-      answer: 'While we encourage participants to stay for the entire duration, we understand emergencies happen. Please inform the organizers if you need to leave early.',
+      answer: 'While we encourage soldiers to stay for the entire duration, we understand emergencies happen. Please inform the organizers if you need to leave early.',
     },
     {
       question: 'Will there be mentors available?',

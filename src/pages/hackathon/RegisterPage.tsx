@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, CheckCircle2 } from 'lucide-react';
+import { createRegistration } from '@/db/api';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -39,52 +40,72 @@ export default function RegisterPage() {
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    try {
-      // Store in localStorage for demo purposes
-      const registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
-      
-      // Check if email already exists
-      const emailExists = registrations.some((reg: FormData) => reg.email === data.email);
-      if (emailExists) {
-        toast({
-          title: 'Registration Failed',
-          description: 'This email is already registered. Each operative can only register once.',
-          variant: 'destructive',
-        });
-        setIsSubmitting(false);
-        return;
-      }
 
-      // Add new registration
-      registrations.push({
-        ...data,
-        id: Date.now().toString(),
-        created_at: new Date().toISOString(),
+    // Small delay for UX
+    await new Promise((resolve) => setTimeout(resolve, 600));
+
+    try {
+      // Try creating registration via Supabase backend
+      const reg = await createRegistration({
+        name: data.name,
+        email: data.email,
+        team_name: data.team_name,
+        skills: data.skills,
       });
-      localStorage.setItem('registrations', JSON.stringify(registrations));
-      
+
       setIsSuccess(true);
       toast({
         title: 'Mission Accepted! ✓',
         description: 'Your registration has been successfully deployed.',
       });
 
-      // Reset form after 2 seconds and redirect
       setTimeout(() => {
         form.reset();
         setIsSuccess(false);
         navigate('/');
-      }, 3000);
-    } catch (error) {
-      toast({
-        title: 'Deployment Failed',
-        description: 'Failed to register. Please try again.',
-        variant: 'destructive',
-      });
+      }, 2000);
+    } catch (err) {
+      // Fallback to localStorage if backend call fails
+      console.warn('Supabase registration failed, falling back to localStorage', err);
+
+      try {
+        const registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
+        const emailExists = registrations.some((reg: FormData) => reg.email === data.email);
+        if (emailExists) {
+          toast({
+            title: 'Registration Failed',
+            description: 'This email is already registered. Each operative can only register once.',
+            variant: 'destructive',
+          });
+          setIsSubmitting(false);
+          return;
+        }
+
+        registrations.push({
+          ...data,
+          id: Date.now().toString(),
+          created_at: new Date().toISOString(),
+        });
+        localStorage.setItem('registrations', JSON.stringify(registrations));
+
+        setIsSuccess(true);
+        toast({
+          title: 'Mission Accepted! ✓',
+          description: 'Registered locally (offline fallback).',
+        });
+
+        setTimeout(() => {
+          form.reset();
+          setIsSuccess(false);
+          navigate('/');
+        }, 2000);
+      } catch (err2) {
+        toast({
+          title: 'Deployment Failed',
+          description: 'Failed to register. Please try again.',
+          variant: 'destructive',
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }

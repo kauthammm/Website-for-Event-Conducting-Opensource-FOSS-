@@ -24,7 +24,7 @@ const App: React.FC = () => {
               element={route.element}
             />
           ))}
-          <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
       </div>

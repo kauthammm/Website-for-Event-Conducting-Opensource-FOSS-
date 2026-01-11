@@ -1,8 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navItems = [
   { path: '/', label: 'Home' },
@@ -14,31 +10,6 @@ const navItems = [
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
-    <>
-      {navItems.map((item) => (
-        <Link
-          key={item.path}
-          to={item.path}
-          className={`
-            ${mobile ? 'block py-3 px-4' : 'px-4 py-2'}
-            text-sm font-medium uppercase tracking-wider
-            transition-colors duration-200
-            ${
-              location.pathname === item.path
-                ? 'text-accent border-b-2 border-accent'
-                : 'text-foreground hover:text-primary'
-            }
-          `}
-          onClick={() => mobile && setMobileMenuOpen(false)}
-        >
-          {item.label}
-        </Link>
-      ))}
-    </>
-  );
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">
@@ -46,34 +17,18 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <header className="sticky top-0 z-50 w-full border-b-2 border-accent/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 battle-damage-shadow">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 intense-glitch-hover">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-accent damaged-armor" style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }} />
+          <Link to="/home" className="flex items-center space-x-2 intense-glitch-hover">
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/images/logo/foss-cit-logo.jpeg" 
+                alt="FOSS CIT Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <span className="text-xl font-bold tracking-wider text-accent distressed-text">
-                HACKATHON
+                I'M GOING INN
               </span>
             </div>
           </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            <NavLinks />
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="text-accent hover:bg-accent/10">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-64 bg-card border-l-2 border-accent/40 damaged-armor">
-              <div className="flex flex-col space-y-4 mt-8">
-                <NavLinks mobile />
-              </div>
-            </SheetContent>
-          </Sheet>
         </div>
       </header>
 
@@ -83,41 +38,28 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       {/* Footer */}
       <footer className="border-t-2 border-accent/40 bg-card war-texture">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-lg font-bold mb-4 text-accent distressed-text">
-                Combat Hackathon
+                I'M GOING INN
               </h3>
               <p className="text-sm text-muted-foreground">
                 Battlefield command center for tactical innovation and combat development.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4 text-accent distressed-text">Quick Links</h3>
-              <ul className="space-y-2">
-                {navItems.map((item) => (
-                  <li key={item.path}>
-                    <Link
-                      to={item.path}
-                      className="text-sm text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
               <h3 className="text-lg font-bold mb-4 text-accent distressed-text">Contact</h3>
               <p className="text-sm text-muted-foreground">
-                Email: warzone@hackathon.mil
+                Email: kauthampjk@gmail.com
                 <br />
-                Phone: +1 (555) WAR-ZONE
+                Phone: 8807830345
               </p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 Combat Hackathon Battlefield Command. All rights reserved.
+            © 2025 I'M GOING INN Battlefield Command. All rights reserved.
+            <br />
+            Website creation by Bros Dont Fake Pvt Limited
           </div>
         </div>
       </footer>

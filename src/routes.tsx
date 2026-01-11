@@ -1,4 +1,8 @@
 import HomePage from './pages/hackathon/HomePage';
+import LoginPage from './pages/auth/LoginPage';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import ParticipantDashboard from './pages/participant/ParticipantDashboard';
+import MissionsPage from './pages/participant/MissionsPage';
 import EventPage from './pages/hackathon/EventPage';
 import RegisterPage from './pages/hackathon/RegisterPage';
 import PrizesPage from './pages/hackathon/PrizesPage';
@@ -14,9 +18,34 @@ interface RouteConfig {
 
 const routes: RouteConfig[] = [
   {
-    name: 'Home',
+    name: 'Login',
     path: '/',
-    element: <HomePage />
+    element: <LoginPage />,
+    visible: true,
+  },
+  {
+    name: 'Commander',
+    path: '/admin',
+    element: <AdminDashboard />,
+    visible: false,
+  },
+  {
+    name: 'Soldier',
+    path: '/participant',
+    element: <ParticipantDashboard />,
+    visible: false,
+  },
+  {
+    name: 'Missions',
+    path: '/missions',
+    element: <MissionsPage />,
+    visible: false,
+  },
+  {
+    name: 'Home',
+    path: '/home',
+    element: <HomePage />,
+    visible: true,
   },
   {
     name: 'Event Info',

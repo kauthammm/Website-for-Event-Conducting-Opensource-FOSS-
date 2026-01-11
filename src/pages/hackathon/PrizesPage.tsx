@@ -67,7 +67,7 @@ export default function PrizesPage() {
     {
       title: 'People\'s Choice',
       prize: '$500',
-      description: 'Voted by event participants',
+      description: 'Voted by event soldiers',
     },
   ];
 

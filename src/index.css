@@ -610,4 +610,61 @@
       radial-gradient(ellipse at 72% 65%, rgba(20, 10, 0, 0.35) 0%, rgba(40, 20, 0, 0.18) 12%, transparent 25%),
       radial-gradient(ellipse at 15% 75%, rgba(20, 10, 0, 0.3) 0%, rgba(40, 20, 0, 0.15) 10%, transparent 22%);
   }
+
+  /* Login page animations */
+  @keyframes scan {
+    0% { top: -10%; }
+    100% { top: 110%; }
+  }
+
+  .animate-scan {
+    animation: scan 3s linear infinite;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in;
+  }
+
+  @keyframes slide-up {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  /* Answer submission pulse */
+  @keyframes answer-flash {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.45); border-color: rgba(255, 107, 0, 0.6); }
+    60% { box-shadow: 0 0 0 12px rgba(255, 107, 0, 0); border-color: rgba(255, 107, 0, 0.3); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0); border-color: rgba(255, 107, 0, 0.15); }
+  }
+
+  .answer-animate {
+    animation: answer-flash 0.9s ease-out;
+  }
+
+  /* Soldier hover emphasis when hero group hovered */
+  .soldier-layer {
+    transition: transform 700ms ease, filter 700ms ease, opacity 700ms ease;
+  }
+
+  .group:hover .soldier-layer {
+    transform: scale(1.08);
+    filter: brightness(1.26) contrast(1.45);
+    opacity: 1;
+  }
 }
+
