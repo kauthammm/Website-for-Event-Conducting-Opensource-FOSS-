@@ -1,4 +1,4 @@
-# Miaoda Event Management Application
+# Event Management Application
 
 🔗 Live Demo: https://medo.dev/projects/app-8cxv3mixab5t
 
